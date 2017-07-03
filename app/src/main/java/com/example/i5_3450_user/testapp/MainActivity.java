@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mHelloTextView;
     private EditText mNameEditText;
-    private Button mRavenCounterButton;
     private int mCount = 0, mCount2 = 0;
     private TextView mHelloTextView2;
 
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRavenCounterButton = (Button)findViewById(R.id.buttonRavenCounter);
         mHelloTextView = (TextView)findViewById(R.id.textView);
         mHelloTextView2 = (TextView)findViewById(R.id.textView2);
         mNameEditText = (EditText)findViewById(R.id.editText);
@@ -35,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClickRavenCounter(View v) {
+    public void onClickRavenCounter(View view) {
         mHelloTextView.setText("Сэр, воронов все больше! Их уже " + ++mCount);
     }
 
-    public void onClickCatCounter(View vv) {
+    public void onClickCatCounter(View view) {
         mHelloTextView2.setText("Коты наступают, это армия, их уже " + ++mCount2);
     }
 }
